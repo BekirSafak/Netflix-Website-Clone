@@ -13,6 +13,8 @@ body {
   color: #fff;
 }
 
+
+/** Header Start */
 .header {
   width: 100%;
   height: 100vh;
@@ -89,7 +91,7 @@ body {
   font-size: 18px;
 }
 
-.header section .mailInputs {
+.mailInputs {
   display: flex;
   align-items: center;
   background: #fff;
@@ -98,7 +100,7 @@ body {
   overflow: hidden;
 }
 
-.header section .mailInputs input {
+.mailInputs input {
   flex: 1;
   /*? flex:1; input ile buttonu sag ve sola yaslamak için kullanıldı. */
   border: none;
@@ -106,7 +108,7 @@ body {
   margin-left: 20px;
 }
 
-.header section .mailInputs button {
+.mailInputs button {
   background: #E50914;
   border: none;
   outline: none;
@@ -114,4 +116,137 @@ body {
   font-size: 16px;
   cursor: pointer;
   padding: 15px 30px;
+}
+
+
+
+/** Content Start */
+.content {
+  padding: 50px 12%;
+  font-size: 22px;
+
+}
+
+.content .row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 50px 0;
+}
+
+.content .row .textBox {
+  flex-basis: 50%;
+  margin-bottom: 20px;
+
+}
+
+.content .row .imgBox {
+  flex-basis: 50%;
+  margin-bottom: 20px;
+  /* todo background-color: chartreuse; */
+}
+
+.content .row .imgBox img {
+  display: block;
+  width: 90%;
+  margin: auto;
+  /*? Bu satırdaki margin:auto değeri .imgBox içerisindeki img etiketini kapsayıcında ortalamaya yarıyor. */
+  /*? Kastedilen işlemi anlamak için yukarıdaki background-color:chartreuse; satırını yorumdan çıkarabilirsiniz.  */
+}
+
+.content .textBox h1 {
+  font-size: 52px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+
+/** Faq Start */
+.faq {
+  padding: 10px 12%;
+  text-align: center;
+  font-size: 18px;
+}
+
+.faq h2 {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.faq .accordion {
+  margin: 60px auto;
+  width: 100%;
+  max-width: 750px;
+}
+
+.faq .accordion li {
+  list-style: none;
+  width: 100%;
+  padding: 5px;
+}
+
+.accordion li label {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  background: #303030;
+  margin-bottom: 2px;
+  cursor: pointer;
+  position: relative;
+}
+
+.accordion li label {
+  display: flex;
+  align-items: center;
+  background-color: royalblue;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  background: #303030;
+  margin-bottom: 2px;
+  cursor: pointer;
+  position: relative;
+}
+
+.accordion li label::after {
+  content: '+';
+  font-size: 34px;
+  position: absolute;
+  right: 20px;
+  transition: transform .5s;
+}
+
+.accordion li input[type="radio"] {
+  display: none;
+}
+
+.accordion li .openAccordion {
+  background: #303030;
+  text-align: left;
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .5s, padding .5s;
+}
+
+.accordion li input[type="radio"]:checked+label+.openAccordion {
+  max-height: 600px;
+  padding: 30px 20px;
+  text-indent: 12px;
+}
+
+.accordion li input[type="radio"]:checked+label::after {
+  transform: rotate(135deg);
+}
+
+.faq .mailInputs {
+  max-width: 600px;
+  margin: 20px auto 60px;
+}
+
+.faq small {
+  font-size: 13px;
 }

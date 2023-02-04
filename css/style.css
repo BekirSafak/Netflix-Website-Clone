@@ -1,2 +1,117 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  padding: 10px 8%;
+  background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../images/header-image.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.header nav img {
+  width: 150px;
+  cursor: pointer;
+}
+
+.header nav .menu button {
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  font-size: 14px;
+  padding: 7px 20px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.header nav .menu .btnLang i {
+  color: #fff;
+}
+
+.header nav .menu .btnLang img {
+  width: 12px;
+}
+
+.header nav .menu .btnLang {
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.header nav .menu .btnSign {
+  background: #E50914;
+  color: #fff;
+}
+
+.header section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.header section h1 {
+  font-size: 60px;
+  line-height: 70px;
+  font-weight: 600;
+}
+
+.header section h3 {
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.header section p {
+  font-size: 18px;
+}
+
+.header section .mailInputs {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 6px;
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+.header section .mailInputs input {
+  flex: 1;
+  /*? flex:1; input ile buttonu sag ve sola yaslamak için kullanıldı. */
+  border: none;
+  outline: none;
+  margin-left: 20px;
+}
+
+.header section .mailInputs button {
+  background: #E50914;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 15px 30px;
+}

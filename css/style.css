@@ -53,10 +53,13 @@ body {
 }
 
 .header nav .menu .btnLang img {
-  width: 12px;
+  width: 10px;
+  margin-left: 10px;
 }
 
 .header nav .menu .btnLang {
+  display: inline-flex;
+  align-items: center;
   background: none;
   border: 1px solid #fff;
   color: #fff;
@@ -249,4 +252,177 @@ body {
 
 .faq small {
   font-size: 13px;
+}
+
+
+/** Footer Start */
+
+.footer {
+  padding: 50px 15% 10px;
+  font-size: 16px;
+  border-top: 6px solid #333;
+  color: #707070;
+}
+
+.footerLinks {
+  display: flex;
+  align-items: center;
+}
+
+.footerLinks ul {
+  list-style: none;
+  margin-bottom: 25px;
+  flex-basis: 25%;
+  flex-grow: 1;
+}
+
+.footerLinks ul li {
+  margin: 12px 0;
+}
+
+.footerLinks ul li a {
+  text-decoration: none;
+  color: #707070;
+  font-size: 13px;
+}
+
+.footerLinks ul li:hover a {
+  text-decoration: underline;
+  color: #707070;
+}
+
+.footer button {
+  border: none;
+  outline: none;
+  border: 1px solid #707070;
+  color: #707070;
+  font-size: 14px;
+  padding: 12px 24px;
+  margin-bottom: 25px;
+  background: none;
+  cursor: pointer;
+}
+
+.footer button i {
+  margin-right: 8px;
+}
+
+.footer button img {
+  width: 12px;
+  margin-left: 8px;
+  color: #303030;
+}
+
+.footer .locationText {
+  font-size: 12px;
+  cursor: pointer;
+}
+
+
+/** Media Queries width:600px */
+@media only screen and (max-width:600px) {
+  .header nav img {
+    width: 100px;
+  }
+
+  .header nav .menu button {
+    padding: 5px 10px;
+  }
+
+  .header nav .menu .btnLang {
+    padding: 4px 8px;
+  }
+
+  .header section {
+    position: unset;
+    transform: none;
+  }
+
+  .header section h1 {
+    font-size: 30px;
+  }
+
+  .mailInputs button {
+    font-size: 12px;
+    padding: 10px 15px;
+  }
+
+  .content .row .textBox,
+  .content .row .imgBox {
+    flex-basis: 100%;
+  }
+
+  .content .textBox h1 {
+    font-size: 30px;
+  }
+
+  .content .textBox p {
+    font-size: 15px;
+  }
+
+  .content .row:nth-child(2),
+  .content .row:nth-child(4) {
+    flex-direction: column-reverse;
+  }
+
+  .content .row {
+    padding: 10px 0;
+  }
+
+  .faq h2 {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .accordion li label {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .accordion li label::after {
+    font-size: 22px;
+    right: 5px;
+  }
+
+  .accordion .openAccordion {
+    font-size: 14px;
+  }
+
+  .footerLinks {
+    display: block;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer p {
+    font-size: 14px;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  .footerLinks ul {
+    margin-bottom: 62px;
+  }
+
+  .footer .btnBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/** Media Queries width:375px */
+@media only screen and (max-width:375px) {
+  .header nav img {
+    width: 70px;
+  }
+
+  .header nav .menu button {
+    padding: 2px;
+  }
+
+  .header nav .menu .btnLang {
+    padding: 2px;
+  }
+
 }
